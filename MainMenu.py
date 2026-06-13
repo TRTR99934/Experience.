@@ -1,0 +1,22 @@
+import tkinter as tk
+import tkinter.font as tkFont
+
+
+class app:
+    def __init__(self, root):
+        # Setting the title
+        root.title('Experience.')
+        # Setting the window size
+        height = 720
+        width = 1280
+        screenheight = root.winfo_screenheight()
+        screenwidth = root.winfo_screenwidth()
+        alignstr = '%dx%d+%d+%d' % (width, height, (screenwidth - width)/2, (screenheight - height)/2)
+        root.geometry(alignstr)
+        root.resizable(width = False, height = False)
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = app(root)
+    root.mainloop()
+
